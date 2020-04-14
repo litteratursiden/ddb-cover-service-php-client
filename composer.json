@@ -1,0 +1,36 @@
+{
+    "name": "danskernesdigitalebibliotek/ddb-cover-service-php-client",
+    "description": "Php Client for DDB Cover Service. Generated with https://github.com/swagger-api/swagger-codegen.",
+    "keywords": [
+        "swagger",
+        "php",
+        "sdk",
+        "api"
+    ],
+    "homepage": "http://swagger.io",
+    "license": "AGPL-3.0-only",
+    "authors": [
+        {
+            "name": "Swagger and contributors",
+            "homepage": "https://github.com/swagger-api/swagger-codegen"
+        }
+    ],
+    "require": {
+        "php": ">=7",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "ext-mbstring": "*",
+        "guzzlehttp/guzzle": "^6.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^4.8",
+        "squizlabs/php_codesniffer": "~2.6",
+        "friendsofphp/php-cs-fixer": "~2.16"
+    },
+    "autoload": {
+        "psr-4": { "Swagger\\Client\\" : "lib/" }
+    },
+    "autoload-dev": {
+        "psr-4": { "Swagger\\Client\\" : "test/" }
+    }
+}
