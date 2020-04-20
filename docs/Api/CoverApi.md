@@ -1,4 +1,4 @@
-# Swagger\Client\CoverApi
+# CoverServicePhpClient\Client\CoverApi
 
 All URIs are relative to */*
 
@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**getCoverItem**](CoverApi.md#getcoveritem) | **GET** /api/cover/{type}/{id} | Retrieves a Cover resource.
 
 # **getCoverCollection**
-> \Swagger\Client\Model\CoverRead[] getCoverCollection($type, $id, $generic, $size, $limit, $offset)
+> \CoverServicePhpClient\Client\Model\CoverRead[] getCoverCollection($type, $id, $generic, $size, $limit, $offset)
 
 Retrieves the collection of Cover resources.
 
@@ -17,17 +17,17 @@ Retrieves the collection of Cover resources.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Swagger\Client\Api\CoverApi(
+$apiInstance = new CoverServicePhpClient\Client\Api\CoverApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$type = "type_example"; // string | 
-$id = "id_example"; // string | 
-$generic = "generic_example"; // string | 
-$size = "size_example"; // string | 
-$limit = 56; // int | 
-$offset = 56; // int | 
+$type = "type_example"; // string |
+$id = "id_example"; // string |
+$generic = "generic_example"; // string |
+$size = "size_example"; // string |
+$limit = 56; // int |
+$offset = 56; // int |
 
 try {
     $result = $apiInstance->getCoverCollection($type, $id, $generic, $size, $limit, $offset);
@@ -51,7 +51,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\CoverRead[]**](../Model/CoverRead.md)
+[**\CoverServicePhpClient\Client\Model\CoverRead[]**](../Model/CoverRead.md)
 
 ### Authorization
 
@@ -65,7 +65,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCoverItem**
-> \Swagger\Client\Model\CoverRead getCoverItem($id, $type)
+> \CoverServicePhpClient\Client\Model\CoverRead getCoverItem($id, $type)
 
 Retrieves a Cover resource.
 
@@ -74,13 +74,13 @@ Retrieves a Cover resource.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Swagger\Client\Api\CoverApi(
+$apiInstance = new CoverServicePhpClient\Client\Api\CoverApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$id = "id_example"; // string | 
-$type = "type_example"; // string | 
+$id = "id_example"; // string |
+$type = "type_example"; // string |
 
 try {
     $result = $apiInstance->getCoverItem($id, $type);
@@ -100,7 +100,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\CoverRead**](../Model/CoverRead.md)
+[**\CoverServicePhpClient\Client\Model\CoverRead**](../Model/CoverRead.md)
 
 ### Authorization
 

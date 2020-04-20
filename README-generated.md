@@ -56,7 +56,7 @@ Please follow the [installation procedure](#installation--usage) and then run th
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Swagger\Client\Api\CoverApi(
+$apiInstance = new CoverServicePhpClient\Client\Api\CoverApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -75,7 +75,7 @@ try {
     echo 'Exception when calling CoverApi->getCoverCollection: ', $e->getMessage(), PHP_EOL;
 }
 
-$apiInstance = new Swagger\Client\Api\CoverApi(
+$apiInstance = new CoverServicePhpClient\Client\Api\CoverApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()

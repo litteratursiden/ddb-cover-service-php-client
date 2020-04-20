@@ -5,7 +5,7 @@
  * PHP version 7
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  CoverServicePhpClient\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace CoverServicePhpClient\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \CoverServicePhpClient\Client\ObjectSerializer;
 
 /**
  * CoverRead Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  CoverServicePhpClient\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */

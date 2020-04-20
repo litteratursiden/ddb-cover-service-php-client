@@ -4,7 +4,7 @@
  * PHP version 7
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  CoverServicePhpClient\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace CoverServicePhpClient\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use CoverServicePhpClient\Client\ApiException;
+use CoverServicePhpClient\Client\Configuration;
+use CoverServicePhpClient\Client\HeaderSelector;
+use CoverServicePhpClient\Client\ObjectSerializer;
 
 /**
  * CoverApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  CoverServicePhpClient\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -98,9 +98,9 @@ class CoverApi
      * @param int $limit limit (optional)
      * @param int $offset offset (optional)
      *
-     * @return \Swagger\Client\Model\CoverRead[]
+     * @return \CoverServicePhpClient\Client\Model\CoverRead[]
      * @throws \InvalidArgumentException
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \CoverServicePhpClient\Client\ApiException on non-2xx response
      */
     public function getCoverCollection($type, $id, $generic = null, $size = null, $limit = null, $offset = null)
     {
@@ -121,13 +121,13 @@ class CoverApi
      * @param int $limit (optional)
      * @param int $offset (optional)
      *
-     * @return array of \Swagger\Client\Model\CoverRead[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CoverServicePhpClient\Client\Model\CoverRead[], HTTP status code, HTTP response headers (array of strings)
      * @throws \InvalidArgumentException
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \CoverServicePhpClient\Client\ApiException on non-2xx response
      */
     public function getCoverCollectionWithHttpInfo($type, $id, $generic = null, $size = null, $limit = null, $offset = null)
     {
-        $returnType = '\Swagger\Client\Model\CoverRead[]';
+        $returnType = '\CoverServicePhpClient\Client\Model\CoverRead[]';
         $request = $this->getCoverCollectionRequest($type, $id, $generic, $size, $limit, $offset);
 
         try {
@@ -178,7 +178,7 @@ class CoverApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\CoverRead[]',
+                        '\CoverServicePhpClient\Client\Model\CoverRead[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -230,7 +230,7 @@ class CoverApi
      */
     public function getCoverCollectionAsyncWithHttpInfo($type, $id, $generic = null, $size = null, $limit = null, $offset = null)
     {
-        $returnType = '\Swagger\Client\Model\CoverRead[]';
+        $returnType = '\CoverServicePhpClient\Client\Model\CoverRead[]';
         $request = $this->getCoverCollectionRequest($type, $id, $generic, $size, $limit, $offset);
 
         return $this->client
@@ -406,9 +406,9 @@ class CoverApi
      * @param string $id id (required)
      * @param string $type type (required)
      *
-     * @return \Swagger\Client\Model\CoverRead
+     * @return \CoverServicePhpClient\Client\Model\CoverRead
      * @throws \InvalidArgumentException
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \CoverServicePhpClient\Client\ApiException on non-2xx response
      */
     public function getCoverItem($id, $type)
     {
@@ -425,13 +425,13 @@ class CoverApi
      * @param string $id (required)
      * @param string $type (required)
      *
-     * @return array of \Swagger\Client\Model\CoverRead, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CoverServicePhpClient\Client\Model\CoverRead, HTTP status code, HTTP response headers (array of strings)
      * @throws \InvalidArgumentException
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \CoverServicePhpClient\Client\ApiException on non-2xx response
      */
     public function getCoverItemWithHttpInfo($id, $type)
     {
-        $returnType = '\Swagger\Client\Model\CoverRead';
+        $returnType = '\CoverServicePhpClient\Client\Model\CoverRead';
         $request = $this->getCoverItemRequest($id, $type);
 
         try {
@@ -482,7 +482,7 @@ class CoverApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\CoverRead',
+                        '\CoverServicePhpClient\Client\Model\CoverRead',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -526,7 +526,7 @@ class CoverApi
      */
     public function getCoverItemAsyncWithHttpInfo($id, $type)
     {
-        $returnType = '\Swagger\Client\Model\CoverRead';
+        $returnType = '\CoverServicePhpClient\Client\Model\CoverRead';
         $request = $this->getCoverItemRequest($id, $type);
 
         return $this->client

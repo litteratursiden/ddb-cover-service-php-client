@@ -1,7 +1,7 @@
 <?php
 
-use Swagger\Client\Api\CoverApi;
-use Swagger\Client\Configuration;
+use CoverServicePhpClient\Client\Api\CoverApi;
+use CoverServicePhpClient\Client\Configuration;
 
 require_once(__DIR__ . '/vendor/autoload.php');
 require_once(__DIR__ . '/config.php');
