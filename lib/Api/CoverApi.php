@@ -65,8 +65,8 @@ class CoverApi
 
     /**
      * @param ClientInterface $client
-     * @param Configuration   $config
-     * @param HeaderSelector  $selector
+     * @param Configuration $config
+     * @param HeaderSelector $selector
      */
     public function __construct(
         ClientInterface $client = null,
@@ -91,20 +91,21 @@ class CoverApi
      *
      * Retrieves the collection of Cover resources.
      *
-     * @param  string $type type (required)
-     * @param  string $id id (required)
-     * @param  string $generic generic (optional)
-     * @param  string $size size (optional)
-     * @param  int $limit limit (optional)
-     * @param  int $offset offset (optional)
+     * @param string $type type (required)
+     * @param string $id id (required)
+     * @param string $generic generic (optional)
+     * @param string $size size (optional)
+     * @param int $limit limit (optional)
+     * @param int $offset offset (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
      * @return \Swagger\Client\Model\CoverRead[]
+     * @throws \InvalidArgumentException
+     * @throws \Swagger\Client\ApiException on non-2xx response
      */
     public function getCoverCollection($type, $id, $generic = null, $size = null, $limit = null, $offset = null)
     {
         list($response) = $this->getCoverCollectionWithHttpInfo($type, $id, $generic, $size, $limit, $offset);
+
         return $response;
     }
 
@@ -113,16 +114,16 @@ class CoverApi
      *
      * Retrieves the collection of Cover resources.
      *
-     * @param  string $type (required)
-     * @param  string $id (required)
-     * @param  string $generic (optional)
-     * @param  string $size (optional)
-     * @param  int $limit (optional)
-     * @param  int $offset (optional)
+     * @param string $type (required)
+     * @param string $id (required)
+     * @param string $generic (optional)
+     * @param string $size (optional)
+     * @param int $limit (optional)
+     * @param int $offset (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\CoverRead[], HTTP status code, HTTP response headers (array of strings)
+     * @throws \InvalidArgumentException
+     * @throws \Swagger\Client\ApiException on non-2xx response
      */
     public function getCoverCollectionWithHttpInfo($type, $id, $generic = null, $size = null, $limit = null, $offset = null)
     {
@@ -162,7 +163,7 @@ class CoverApi
                 $content = $responseBody; //stream goes to serializer
             } else {
                 $content = $responseBody->getContents();
-                if (!in_array($returnType, ['string','integer','bool'])) {
+                if (!in_array($returnType, ['string', 'integer', 'bool'])) {
                     $content = json_decode($content);
                 }
             }
@@ -170,9 +171,8 @@ class CoverApi
             return [
                 ObjectSerializer::deserialize($content, $returnType, []),
                 $response->getStatusCode(),
-                $response->getHeaders()
+                $response->getHeaders(),
             ];
-
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
@@ -193,15 +193,15 @@ class CoverApi
      *
      * Retrieves the collection of Cover resources.
      *
-     * @param  string $type (required)
-     * @param  string $id (required)
-     * @param  string $generic (optional)
-     * @param  string $size (optional)
-     * @param  int $limit (optional)
-     * @param  int $offset (optional)
+     * @param string $type (required)
+     * @param string $id (required)
+     * @param string $generic (optional)
+     * @param string $size (optional)
+     * @param int $limit (optional)
+     * @param int $offset (optional)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
+     * @throws \InvalidArgumentException
      */
     public function getCoverCollectionAsync($type, $id, $generic = null, $size = null, $limit = null, $offset = null)
     {
@@ -218,15 +218,15 @@ class CoverApi
      *
      * Retrieves the collection of Cover resources.
      *
-     * @param  string $type (required)
-     * @param  string $id (required)
-     * @param  string $generic (optional)
-     * @param  string $size (optional)
-     * @param  int $limit (optional)
-     * @param  int $offset (optional)
+     * @param string $type (required)
+     * @param string $id (required)
+     * @param string $generic (optional)
+     * @param string $size (optional)
+     * @param int $limit (optional)
+     * @param int $offset (optional)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
+     * @throws \InvalidArgumentException
      */
     public function getCoverCollectionAsyncWithHttpInfo($type, $id, $generic = null, $size = null, $limit = null, $offset = null)
     {
@@ -250,7 +250,7 @@ class CoverApi
                     return [
                         ObjectSerializer::deserialize($content, $returnType, []),
                         $response->getStatusCode(),
-                        $response->getHeaders()
+                        $response->getHeaders(),
                     ];
                 },
                 function ($exception) {
@@ -273,15 +273,15 @@ class CoverApi
     /**
      * Create request for operation 'getCoverCollection'
      *
-     * @param  string $type (required)
-     * @param  string $id (required)
-     * @param  string $generic (optional)
-     * @param  string $size (optional)
-     * @param  int $limit (optional)
-     * @param  int $offset (optional)
+     * @param string $type (required)
+     * @param string $id (required)
+     * @param string $generic (optional)
+     * @param string $size (optional)
+     * @param int $limit (optional)
+     * @param int $offset (optional)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
+     * @throws \InvalidArgumentException
      */
     protected function getCoverCollectionRequest($type, $id, $generic = null, $size = null, $limit = null, $offset = null)
     {
@@ -329,7 +329,7 @@ class CoverApi
         // path params
         if ($type !== null) {
             $resourcePath = str_replace(
-                '{' . 'type' . '}',
+                '{'.'type'.'}',
                 ObjectSerializer::toPathValue($type),
                 $resourcePath
             );
@@ -363,15 +363,13 @@ class CoverApi
                 foreach ($formParams as $formParamName => $formParamValue) {
                     $multipartContents[] = [
                         'name' => $formParamName,
-                        'contents' => $formParamValue
+                        'contents' => $formParamValue,
                     ];
                 }
                 // for HTTP post (form)
                 $httpBody = new MultipartStream($multipartContents);
-
             } elseif ($headers['Content-Type'] === 'application/json') {
                 $httpBody = \GuzzleHttp\json_encode($formParams);
-
             } else {
                 // for HTTP post (form)
                 $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
@@ -391,9 +389,10 @@ class CoverApi
         );
 
         $query = \GuzzleHttp\Psr7\build_query($queryParams);
+
         return new Request(
             'GET',
-            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $this->config->getHost().$resourcePath.($query ? "?{$query}" : ''),
             $headers,
             $httpBody
         );
@@ -404,16 +403,17 @@ class CoverApi
      *
      * Retrieves a Cover resource.
      *
-     * @param  string $id id (required)
-     * @param  string $type type (required)
+     * @param string $id id (required)
+     * @param string $type type (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
      * @return \Swagger\Client\Model\CoverRead
+     * @throws \InvalidArgumentException
+     * @throws \Swagger\Client\ApiException on non-2xx response
      */
     public function getCoverItem($id, $type)
     {
         list($response) = $this->getCoverItemWithHttpInfo($id, $type);
+
         return $response;
     }
 
@@ -422,12 +422,12 @@ class CoverApi
      *
      * Retrieves a Cover resource.
      *
-     * @param  string $id (required)
-     * @param  string $type (required)
+     * @param string $id (required)
+     * @param string $type (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\CoverRead, HTTP status code, HTTP response headers (array of strings)
+     * @throws \InvalidArgumentException
+     * @throws \Swagger\Client\ApiException on non-2xx response
      */
     public function getCoverItemWithHttpInfo($id, $type)
     {
@@ -467,7 +467,7 @@ class CoverApi
                 $content = $responseBody; //stream goes to serializer
             } else {
                 $content = $responseBody->getContents();
-                if (!in_array($returnType, ['string','integer','bool'])) {
+                if (!in_array($returnType, ['string', 'integer', 'bool'])) {
                     $content = json_decode($content);
                 }
             }
@@ -475,9 +475,8 @@ class CoverApi
             return [
                 ObjectSerializer::deserialize($content, $returnType, []),
                 $response->getStatusCode(),
-                $response->getHeaders()
+                $response->getHeaders(),
             ];
-
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
@@ -498,11 +497,11 @@ class CoverApi
      *
      * Retrieves a Cover resource.
      *
-     * @param  string $id (required)
-     * @param  string $type (required)
+     * @param string $id (required)
+     * @param string $type (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
+     * @throws \InvalidArgumentException
      */
     public function getCoverItemAsync($id, $type)
     {
@@ -519,11 +518,11 @@ class CoverApi
      *
      * Retrieves a Cover resource.
      *
-     * @param  string $id (required)
-     * @param  string $type (required)
+     * @param string $id (required)
+     * @param string $type (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
+     * @throws \InvalidArgumentException
      */
     public function getCoverItemAsyncWithHttpInfo($id, $type)
     {
@@ -547,7 +546,7 @@ class CoverApi
                     return [
                         ObjectSerializer::deserialize($content, $returnType, []),
                         $response->getStatusCode(),
-                        $response->getHeaders()
+                        $response->getHeaders(),
                     ];
                 },
                 function ($exception) {
@@ -570,11 +569,11 @@ class CoverApi
     /**
      * Create request for operation 'getCoverItem'
      *
-     * @param  string $id (required)
-     * @param  string $type (required)
+     * @param string $id (required)
+     * @param string $type (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
+     * @throws \InvalidArgumentException
      */
     protected function getCoverItemRequest($id, $type)
     {
@@ -602,7 +601,7 @@ class CoverApi
         // path params
         if ($id !== null) {
             $resourcePath = str_replace(
-                '{' . 'id' . '}',
+                '{'.'id'.'}',
                 ObjectSerializer::toPathValue($id),
                 $resourcePath
             );
@@ -610,7 +609,7 @@ class CoverApi
         // path params
         if ($type !== null) {
             $resourcePath = str_replace(
-                '{' . 'type' . '}',
+                '{'.'type'.'}',
                 ObjectSerializer::toPathValue($type),
                 $resourcePath
             );
@@ -644,15 +643,13 @@ class CoverApi
                 foreach ($formParams as $formParamName => $formParamValue) {
                     $multipartContents[] = [
                         'name' => $formParamName,
-                        'contents' => $formParamValue
+                        'contents' => $formParamValue,
                     ];
                 }
                 // for HTTP post (form)
                 $httpBody = new MultipartStream($multipartContents);
-
             } elseif ($headers['Content-Type'] === 'application/json') {
                 $httpBody = \GuzzleHttp\json_encode($formParams);
-
             } else {
                 // for HTTP post (form)
                 $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
@@ -672,9 +669,10 @@ class CoverApi
         );
 
         $query = \GuzzleHttp\Psr7\build_query($queryParams);
+
         return new Request(
             'GET',
-            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $this->config->getHost().$resourcePath.($query ? "?{$query}" : ''),
             $headers,
             $httpBody
         );
@@ -683,8 +681,8 @@ class CoverApi
     /**
      * Create http client option
      *
-     * @throws \RuntimeException on file opening failure
      * @return array of http client options
+     * @throws \RuntimeException on file opening failure
      */
     protected function createHttpClientOption()
     {
@@ -692,7 +690,7 @@ class CoverApi
         if ($this->config->getDebug()) {
             $options[RequestOptions::DEBUG] = fopen($this->config->getDebugFile(), 'a');
             if (!$options[RequestOptions::DEBUG]) {
-                throw new \RuntimeException('Failed to open the debug file: ' . $this->config->getDebugFile());
+                throw new \RuntimeException('Failed to open the debug file: '.$this->config->getDebugFile());
             }
         }
 

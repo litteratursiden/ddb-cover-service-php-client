@@ -6,6 +6,8 @@ Generated from swagger documentation with https://swagger.io/tools/swagger-codeg
 
 ## Test script.
 
+See `test.php` for an example of the use of the library.
+
 Copy `config.php.template` to `config.php` and fill out the required constants.
 
 ```
@@ -37,4 +39,3 @@ swagger-codegen generate -i https://cover.dandigbib.org/openapi/openapi.yaml -l 
 ```
 https://github.com/swagger-api/swagger-codegen
 ```
-
