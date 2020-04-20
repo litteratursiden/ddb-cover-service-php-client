@@ -1,7 +1,7 @@
 <?php
 /**
  * Configuration
- * PHP version 5
+ * PHP version 7
  *
  * @category Class
  * @package  Swagger\Client
@@ -29,7 +29,7 @@ namespace Swagger\Client;
 
 /**
  * Configuration Class Doc Comment
- * PHP version 5
+ * PHP version 7
  *
  * @category Class
  * @package  Swagger\Client

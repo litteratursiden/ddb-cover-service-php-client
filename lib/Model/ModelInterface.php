@@ -2,7 +2,7 @@
 /**
  * ModelInterface
  *
- * PHP version 5
+ * PHP version 7
  *
  * @category Class
  * @package  Swagger\Client\Model
