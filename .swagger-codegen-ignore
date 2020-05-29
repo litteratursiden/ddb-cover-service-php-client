@@ -3,9 +3,9 @@
 
 # Use this file to prevent files from being overwritten by the generator.
 
-.gitignore
-README.md
-test.php
-config.php.template
-LICENSE
+composer.json
 git_push.sh
+.travis.yml
+.phpunit.xml.dist
+phpunit.xml.dist
+.php_cs
