@@ -71,7 +71,8 @@ $identifiers = array("identifiers_example"); // string[] | A list of identifiers
 $sizes = array("sizes_example"); // string[] | A list of image sizes (Cloudinary transformations) for the cover(s) you want to receive.
 
 try {
-    $apiInstance->getCoverCollection($type, $identifiers, $sizes);
+    $result = $apiInstance->getCoverCollection($type, $identifiers, $sizes);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CoverApi->getCoverCollection: ', $e->getMessage(), PHP_EOL;
 }

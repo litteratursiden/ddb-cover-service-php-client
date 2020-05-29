@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**getCoverCollection**](CoverApi.md#getcovercollection) | **GET** /api/v2/covers | Search multiple covers
 
 # **getCoverCollection**
-> getCoverCollection($type, $identifiers, $sizes)
+> \CoverService\Model\Cover[] getCoverCollection($type, $identifiers, $sizes)
 
 Search multiple covers
 
@@ -32,7 +32,8 @@ $identifiers = array("identifiers_example"); // string[] | A list of identifiers
 $sizes = array("sizes_example"); // string[] | A list of image sizes (Cloudinary transformations) for the cover(s) you want to receive.
 
 try {
-    $apiInstance->getCoverCollection($type, $identifiers, $sizes);
+    $result = $apiInstance->getCoverCollection($type, $identifiers, $sizes);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CoverApi->getCoverCollection: ', $e->getMessage(), PHP_EOL;
 }
@@ -49,7 +50,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**\CoverService\Model\Cover[]**](../Model/Cover.md)
 
 ### Authorization
 
@@ -58,7 +59,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
