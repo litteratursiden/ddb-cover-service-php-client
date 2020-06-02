@@ -58,7 +58,7 @@ class Cover implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'id' => 'string',
         'type' => 'string',
-        'image_urls' => '\CoverService\Model\ImageUrl[]'    ];
+        'image_urls' => '\CoverService\Model\ImageUrl[]'];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -68,7 +68,7 @@ class Cover implements ModelInterface, ArrayAccess
     protected static $swaggerFormats = [
         'id' => null,
         'type' => null,
-        'image_urls' => null    ];
+        'image_urls' => null];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -99,7 +99,7 @@ class Cover implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
         'id' => 'id',
         'type' => 'type',
-        'image_urls' => 'imageUrls'    ];
+        'image_urls' => 'imageUrls'];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -109,7 +109,7 @@ class Cover implements ModelInterface, ArrayAccess
     protected static $setters = [
         'id' => 'setId',
         'type' => 'setType',
-        'image_urls' => 'setImageUrls'    ];
+        'image_urls' => 'setImageUrls'];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -119,7 +119,7 @@ class Cover implements ModelInterface, ArrayAccess
     protected static $getters = [
         'id' => 'getId',
         'type' => 'getType',
-        'image_urls' => 'getImageUrls'    ];
+        'image_urls' => 'getImageUrls'];
 
     /**
      * Array of attributes where the key is the local name,

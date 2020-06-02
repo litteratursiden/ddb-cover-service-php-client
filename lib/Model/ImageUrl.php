@@ -58,7 +58,7 @@ class ImageUrl implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'url' => 'string',
         'format' => 'string',
-        'size' => 'string'    ];
+        'size' => 'string'];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -68,7 +68,7 @@ class ImageUrl implements ModelInterface, ArrayAccess
     protected static $swaggerFormats = [
         'url' => 'url',
         'format' => null,
-        'size' => null    ];
+        'size' => null];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -99,7 +99,7 @@ class ImageUrl implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
         'url' => 'url',
         'format' => 'format',
-        'size' => 'size'    ];
+        'size' => 'size'];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -109,7 +109,7 @@ class ImageUrl implements ModelInterface, ArrayAccess
     protected static $setters = [
         'url' => 'setUrl',
         'format' => 'setFormat',
-        'size' => 'setSize'    ];
+        'size' => 'setSize'];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -119,7 +119,7 @@ class ImageUrl implements ModelInterface, ArrayAccess
     protected static $getters = [
         'url' => 'getUrl',
         'format' => 'getFormat',
-        'size' => 'getSize'    ];
+        'size' => 'getSize'];
 
     /**
      * Array of attributes where the key is the local name,
