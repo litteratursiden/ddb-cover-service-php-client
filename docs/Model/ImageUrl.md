@@ -1,11 +1,11 @@
-# Cover
+# ImageUrl
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **string** |  | [optional] 
-**type** | **string** |  | [optional] 
-**image_urls** | [**\CoverService\Model\ImageUrl[]**](ImageUrl.md) |  | [optional] 
+**url** | **string** |  | [optional] 
+**format** | **string** |  | [optional] 
+**size** | **string** |  | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

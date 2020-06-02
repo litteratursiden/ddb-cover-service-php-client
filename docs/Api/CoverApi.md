@@ -28,7 +28,7 @@ $apiInstance = new CoverService\Api\CoverApi(
     $config
 );
 $type = "type_example"; // string | The type of the identifier, i.e. 'isbn', 'faust', 'pid' or 'issn'
-$identifiers = array("identifiers_example"); // string[] | A list of identifiers of {type}
+$identifiers = array("identifiers_example"); // string[] | A list of identifiers of {type}. Maximum number os identifiers per reqeust is 200
 $sizes = array("sizes_example"); // string[] | A list of image sizes (Cloudinary transformations) for the cover(s) you want to receive.
 
 try {
@@ -45,7 +45,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **type** | **string**| The type of the identifier, i.e. &#x27;isbn&#x27;, &#x27;faust&#x27;, &#x27;pid&#x27; or &#x27;issn&#x27; |
- **identifiers** | [**string[]**](../Model/string.md)| A list of identifiers of {type} |
+ **identifiers** | [**string[]**](../Model/string.md)| A list of identifiers of {type}. Maximum number os identifiers per reqeust is 200 |
  **sizes** | [**string[]**](../Model/string.md)| A list of image sizes (Cloudinary transformations) for the cover(s) you want to receive. | [optional]
 
 ### Return type

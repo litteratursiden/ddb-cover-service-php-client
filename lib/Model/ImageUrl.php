@@ -1,6 +1,6 @@
 <?php
 /**
- * Cover
+ * ImageUrl
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \CoverService\ObjectSerializer;
 
 /**
- * Cover Class Doc Comment
+ * ImageUrl Class Doc Comment
  *
  * @category Class
  * @package  CoverService
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class Cover implements ModelInterface, ArrayAccess
+class ImageUrl implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class Cover implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'Cover';
+    protected static $swaggerModelName = 'ImageUrl';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,9 +56,9 @@ class Cover implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'string',
-'type' => 'string',
-'image_urls' => '\CoverService\Model\ImageUrl[]'    ];
+        'url' => 'string',
+'format' => 'string',
+'size' => 'string'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -66,9 +66,9 @@ class Cover implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'id' => null,
-'type' => null,
-'image_urls' => null    ];
+        'url' => 'url',
+'format' => null,
+'size' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -97,9 +97,9 @@ class Cover implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
-'type' => 'type',
-'image_urls' => 'imageUrls'    ];
+        'url' => 'url',
+'format' => 'format',
+'size' => 'size'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -107,9 +107,9 @@ class Cover implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-'type' => 'setType',
-'image_urls' => 'setImageUrls'    ];
+        'url' => 'setUrl',
+'format' => 'setFormat',
+'size' => 'setSize'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -117,9 +117,9 @@ class Cover implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-'type' => 'getType',
-'image_urls' => 'getImageUrls'    ];
+        'url' => 'getUrl',
+'format' => 'getFormat',
+'size' => 'getSize'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -162,19 +162,25 @@ class Cover implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    const TYPE_PID = 'pid';
-const TYPE_ISBN = 'isbn';
+    const SIZE__DEFAULT = 'default';
+const SIZE_ORIGINAL = 'original';
+const SIZE_SMALL = 'small';
+const SIZE_MEDIUM = 'medium';
+const SIZE_LARGE = 'large';
 
     /**
      * Gets allowable values of the enum
      *
      * @return string[]
      */
-    public function getTypeAllowableValues()
+    public function getSizeAllowableValues()
     {
         return [
-            self::TYPE_PID,
-self::TYPE_ISBN,        ];
+            self::SIZE__DEFAULT,
+self::SIZE_ORIGINAL,
+self::SIZE_SMALL,
+self::SIZE_MEDIUM,
+self::SIZE_LARGE,        ];
     }
 
     /**
@@ -192,9 +198,9 @@ self::TYPE_ISBN,        ];
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
-        $this->container['image_urls'] = isset($data['image_urls']) ? $data['image_urls'] : null;
+        $this->container['url'] = isset($data['url']) ? $data['url'] : null;
+        $this->container['format'] = isset($data['format']) ? $data['format'] : null;
+        $this->container['size'] = isset($data['size']) ? $data['size'] : null;
     }
 
     /**
@@ -206,10 +212,10 @@ self::TYPE_ISBN,        ];
     {
         $invalidProperties = [];
 
-        $allowedValues = $this->getTypeAllowableValues();
-        if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
+        $allowedValues = $this->getSizeAllowableValues();
+        if (!is_null($this->container['size']) && !in_array($this->container['size'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
-                "invalid value for 'type', must be one of '%s'",
+                "invalid value for 'size', must be one of '%s'",
                 implode("', '", $allowedValues)
             );
         }
@@ -230,82 +236,82 @@ self::TYPE_ISBN,        ];
 
 
     /**
-     * Gets id
+     * Gets url
      *
      * @return string
      */
-    public function getId()
+    public function getUrl()
     {
-        return $this->container['id'];
+        return $this->container['url'];
     }
 
     /**
-     * Sets id
+     * Sets url
      *
-     * @param string $id id
+     * @param string $url url
      *
      * @return $this
      */
-    public function setId($id)
+    public function setUrl($url)
     {
-        $this->container['id'] = $id;
+        $this->container['url'] = $url;
 
         return $this;
     }
 
     /**
-     * Gets type
+     * Gets format
      *
      * @return string
      */
-    public function getType()
+    public function getFormat()
     {
-        return $this->container['type'];
+        return $this->container['format'];
     }
 
     /**
-     * Sets type
+     * Sets format
      *
-     * @param string $type type
+     * @param string $format format
      *
      * @return $this
      */
-    public function setType($type)
+    public function setFormat($format)
     {
-        $allowedValues = $this->getTypeAllowableValues();
-        if (!is_null($type) && !in_array($type, $allowedValues, true)) {
+        $this->container['format'] = $format;
+
+        return $this;
+    }
+
+    /**
+     * Gets size
+     *
+     * @return string
+     */
+    public function getSize()
+    {
+        return $this->container['size'];
+    }
+
+    /**
+     * Sets size
+     *
+     * @param string $size size
+     *
+     * @return $this
+     */
+    public function setSize($size)
+    {
+        $allowedValues = $this->getSizeAllowableValues();
+        if (!is_null($size) && !in_array($size, $allowedValues, true)) {
             throw new \InvalidArgumentException(
                 sprintf(
-                    "Invalid value for 'type', must be one of '%s'",
+                    "Invalid value for 'size', must be one of '%s'",
                     implode("', '", $allowedValues)
                 )
             );
         }
-        $this->container['type'] = $type;
-
-        return $this;
-    }
-
-    /**
-     * Gets image_urls
-     *
-     * @return \CoverService\Model\ImageUrl[]
-     */
-    public function getImageUrls()
-    {
-        return $this->container['image_urls'];
-    }
-
-    /**
-     * Sets image_urls
-     *
-     * @param \CoverService\Model\ImageUrl[] $image_urls image_urls
-     *
-     * @return $this
-     */
-    public function setImageUrls($image_urls)
-    {
-        $this->container['image_urls'] = $image_urls;
+        $this->container['size'] = $size;
 
         return $this;
     }
