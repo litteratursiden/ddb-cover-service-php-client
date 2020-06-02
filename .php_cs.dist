@@ -10,5 +10,6 @@ return PhpCsFixer\Config::create()
         'phpdoc_align' => false,
         'no_superfluous_phpdoc_tags' => false,
         'array_syntax' => ['syntax' => 'short'],
+        'array_indentation' => true,
     ])
     ->setFinder($finder);

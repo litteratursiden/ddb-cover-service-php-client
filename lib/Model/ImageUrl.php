@@ -57,8 +57,8 @@ class ImageUrl implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'url' => 'string',
-'format' => 'string',
-'size' => 'string'    ];
+        'format' => 'string',
+        'size' => 'string'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -67,8 +67,8 @@ class ImageUrl implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'url' => 'url',
-'format' => null,
-'size' => null    ];
+        'format' => null,
+        'size' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -98,8 +98,8 @@ class ImageUrl implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'url' => 'url',
-'format' => 'format',
-'size' => 'size'    ];
+        'format' => 'format',
+        'size' => 'size'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -108,8 +108,8 @@ class ImageUrl implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'url' => 'setUrl',
-'format' => 'setFormat',
-'size' => 'setSize'    ];
+        'format' => 'setFormat',
+        'size' => 'setSize'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -118,8 +118,8 @@ class ImageUrl implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'url' => 'getUrl',
-'format' => 'getFormat',
-'size' => 'getSize'    ];
+        'format' => 'getFormat',
+        'size' => 'getSize'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -177,10 +177,10 @@ class ImageUrl implements ModelInterface, ArrayAccess
     {
         return [
             self::SIZE__DEFAULT,
-self::SIZE_ORIGINAL,
-self::SIZE_SMALL,
-self::SIZE_MEDIUM,
-self::SIZE_LARGE,        ];
+            self::SIZE_ORIGINAL,
+            self::SIZE_SMALL,
+            self::SIZE_MEDIUM,
+            self::SIZE_LARGE,        ];
     }
 
     /**
