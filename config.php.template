@@ -1,6 +1,0 @@
-<?php
-
-const HOST = '';
-const BASIC_AUTH_USERNAME = '';
-const BASIC_AUTH_PASSWORD = '';
-const ACCESS_TOKEN = NULL;

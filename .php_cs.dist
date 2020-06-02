@@ -1,7 +1,7 @@
 <?php
 
 $finder = PhpCsFixer\Finder::create()
-    ->in(__DIR__.'/{lib}')
+    ->in(__DIR__.'/lib')
 ;
 
 return PhpCsFixer\Config::create()
@@ -10,5 +10,6 @@ return PhpCsFixer\Config::create()
         'phpdoc_align' => false,
         'no_superfluous_phpdoc_tags' => false,
         'array_syntax' => ['syntax' => 'short'],
+        'array_indentation' => true,
     ])
     ->setFinder($finder);
