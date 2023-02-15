@@ -1,21 +1,9 @@
 {
     "name": "danskernesdigitalebibliotek/ddb-cover-service-php-client",
-    "version": "2.0.0",
-    "description": "",
-    "keywords": [
-        "swagger",
-        "php",
-        "sdk",
-        "api"
-    ],
-    "homepage": "http://swagger.io",
+    "version": "1.0.1",
+    "description": "Api Client for DDF Cover Service",
+    "homepage": "https://github.com/danskernesdigitalebibliotek/ddb-cover-service-php-client",
     "license": "AGPL-3.0-only",
-    "authors": [
-        {
-            "name": "Swagger and contributors",
-            "homepage": "https://github.com/swagger-api/swagger-codegen"
-        }
-    ],
     "require": {
         "php": ">=7",
         "ext-curl": "*",
@@ -24,41 +12,20 @@
         "guzzlehttp/guzzle": "^6.2"
     },
     "require-dev": {
-        "friendsofphp/php-cs-fixer": "^2.16",
-        "squizlabs/php_codesniffer": "^3.5"
+        "friendsofphp/php-cs-fixer": "^2.16"
     },
     "autoload": {
         "psr-4": { "CoverService\\" : "lib/" }
     },
-    "scripts":{
-        "check": [
-            "@check-coding-standards"
+    "scripts": {
+        "coding-standards-apply": [
+            "php-cs-fixer fix"
         ],
-        "check-coding-standards/php-cs-fixer": [
-            "php-cs-fixer --config=.php_cs.dist fix --dry-run --format=checkstyle"
-        ],
-        "check-coding-standards/phpcs": [
-            "phpcs --standard=phpcs.xml.dist"
-        ],
-        "check-coding-standards": [
-            "@check-coding-standards/php-cs-fixer",
-            "@check-coding-standards/phpcs"
-        ],
-        "apply-coding-standards/php-cs-fixer": [
-            "php-cs-fixer --config=.php_cs.dist fix"
-        ],
-        "apply-coding-standards/phpcs": [
-            "phpcbf --standard=phpcs.xml.dist"
-        ],
-        "apply-coding-standards": [
-            "@apply-coding-standards/php-cs-fixer",
-            "@apply-coding-standards/phpcs"
-        ],
-        "actions/phpcs": [
-            "phpcs --standard=phpcs.xml.dist --report=checkstyle"
+        "coding-standards-check": [
+            "php-cs-fixer fix --dry-run --format=checkstyle"
         ],
         "actions/phpcsfixer": [
-            "php-cs-fixer --config=.php_cs.dist fix --dry-run --diff --diff-format=udiff"
+            "php-cs-fixer fix --dry-run --format=checkstyle"
         ]
     }
 }
