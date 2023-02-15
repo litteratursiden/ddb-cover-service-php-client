@@ -1,4 +1,6 @@
-# This service provides covers for library materials indexed by isbn, issn, faust, pid. 
+# Api Client for DDF Cover Service 
+
+This is a PHP Api Client for DDF Cover Service. This service provides covers for library materials indexed by isbn, issn, faust, pid. 
 The service is provided by [Danskernes Digitale Bibliotek](https://www.danskernesdigitalebibliotek.dk/) 
 
 ### Authentication notes 
@@ -18,23 +20,11 @@ PHP 5.5 and later
 ## Installation & Usage
 ### Composer
 
-To install the bindings via [Composer](http://getcomposer.org/), add the following to `composer.json`:
+To install the bindings via [Composer](http://getcomposer.org/), do:
 
 ```
-{
-  "repositories": [
-    {
-      "type": "git",
-      "url": "https://github.com/danskernesdigitalebibliotek/ddb-cover-service-php-client.git"
-    }
-  ],
-  "require": {
-    "danskernesdigitalebibliotek/ddb-cover-service-php-client": "*@dev"
-  }
-}
+composer require composer require danskernesdigitalebibliotek/ddb-cover-service-php-client
 ```
-
-Then run `composer install`
 
 ### Manual Installation
 
@@ -42,15 +32,6 @@ Download the files and include `autoload.php`:
 
 ```php
     require_once('/path/to//vendor/autoload.php');
-```
-
-## Tests
-
-To run the unit tests:
-
-```
-composer install
-./vendor/bin/phpunit
 ```
 
 ## Getting Started
