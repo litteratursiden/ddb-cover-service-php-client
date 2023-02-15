@@ -23,7 +23,7 @@ PHP 5.5 and later
 To install the bindings via [Composer](http://getcomposer.org/), do:
 
 ```
-composer require composer require danskernesdigitalebibliotek/ddb-cover-service-php-client
+composer require danskernesdigitalebibliotek/ddb-cover-service-php-client
 ```
 
 ### Manual Installation
