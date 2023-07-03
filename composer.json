@@ -1,6 +1,6 @@
 {
-    "name": "danskernesdigitalebibliotek/ddb-cover-service-php-client",
-    "version": "1.0.1",
+    "name": "litteratursiden/ddb-cover-service-php-client",
+    "version": "1.0.0",
     "description": "Api Client for DDF Cover Service",
     "homepage": "https://github.com/danskernesdigitalebibliotek/ddb-cover-service-php-client",
     "license": "AGPL-3.0-only",
